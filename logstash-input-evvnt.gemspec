@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
   # Gem dependencies
   s.add_runtime_dependency "logstash-core", '>= 1.4.0', '< 2.0.0'
   s.add_runtime_dependency 'logstash-codec-plain'
+  s.add_runtime_dependency 'faraday'
   s.add_runtime_dependency 'faraday_middleware'
   s.add_development_dependency 'logstash-devutils'
 end
