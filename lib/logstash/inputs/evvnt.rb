@@ -58,8 +58,8 @@ class LogStash::Inputs::Evvnt < LogStash::Inputs::Base
       response = connection.get(@path)
   
       # for each entry in the response enqueue a new event
-      response.body.each { |ev|
-        event = LogStash::Event.new("event" => ev)
+      response.body.each { |e|
+        event = LogStash::Event.new e
         decorate(event)
         queue << event
       }
